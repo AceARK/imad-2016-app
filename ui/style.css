@@ -20,3 +20,15 @@ body {
     height: 200px;
 }
 
+.container{
+    max-width: 1000;
+    font-family: sans-serif;
+    color: #4e4949;
+    padding: 20;
+    margin: 0 auto;
+    padding-left: 60;
+    padding-right: 60;
+}
+.content{
+    color:#0889e8;
+}
