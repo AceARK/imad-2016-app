@@ -1,15 +1,23 @@
-console.log('Loaded!');
-//changing value of innerHTML of 'main-text'
+//counter code
+var button = document.getElementById("counter");
+//Create a request object
+button.onclick = function() {
+    var request = new XMLHTTPRequest();
+    //Capture response and store in variable
+    request.onreadystatechange = function(){
+        if(request.readystate === XMLHTTPRequest.DONE){
+            //Take some action
+            if(request.status == 200){
+                var counter = request.responseText;
+                //Render variable in span
+                var span = document.getElementById("count");
+                span.innerHTML = counter.toString();
+            }
+        }
+    };// Not yet done
 
-var element = document.getElementById('main-text');
-element.innerHTML = ('New value using code console');
+    //Make a request
+    request.open("GET",'http://aceark.hasura-app.io/counter',true);
+    request.send(null);
+};
 
-var marginLeft = 0;
-var img = document.getElementById('madi');
-function moveRight(){
-    marginLeft = marginLeft +5;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.onclick = function(){
-    var interval = setInterval(moveRight, 50);
-}
