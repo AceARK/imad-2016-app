@@ -12,7 +12,7 @@ button.onclick = function() {
                 var counter = request.responseText;
                 //Render variable in span
                 var span = document.getElementById('count');
-                console.log("The current count is "+counter.toString());
+                alert("The current count is "+ counter.toString());
                 span.innerHTML = counter.toString();
             }
         }
