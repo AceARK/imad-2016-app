@@ -7,7 +7,7 @@ button.onclick = function() {
     //Capture response and store in variable
     request.onreadystatechange = function(){
         console.log("Hello Ace");
-        if(request.readystate === XMLHttpRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE){
             
             comsole.log("gehrhrf");
             //Take some action
