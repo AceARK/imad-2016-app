@@ -17,7 +17,7 @@ button.onclick = function() {
     };// Not yet done
 
     //Make a request
-    request.open("GET",'http://aceark.imad.hasura-app.io/counter',true);
+    request.open('GET','http://aceark.imad.hasura-app.io/counter',true);
     request.send(null);
 };
 
