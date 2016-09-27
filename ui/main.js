@@ -46,4 +46,7 @@ submit.onclick = function(){
             }
         }
     };
+    
+    request.open('GET','http://aceark.imad.hasura-app.io/submit?name=',true);
+    request.send(null);
 };
