@@ -28,13 +28,22 @@ var name = nameInput.value;
 var submit = document.getElementById('submit');
 submit.onclick = function(){
     //function to make a request to server and send name
-    
-    //capture name in array and send a list
-    var names = ['name1', 'name2', 'name3', 'name4'];
-    var list = '';
-    for(var i=0;i<names.length;i++){
-     list = list + '<li>' + names[i] + '</li>';
-    }
-    var ul = document.getElementById('nameList');
-    ul.innerHTML = list;
+    var request = new XMLHttpRequest();
+    //Capture response and store in variable
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            //Take some action
+            if(request.status == 200){
+                //capture name in array and send a list
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var list = '';
+                for(var i=0;i<names.length;i++){
+                 list = list + '<li>' + names[i] + '</li>';
+                }
+                 var ul = document.getElementById('nameList');
+                ul.innerHTML = list;
+            }
+        }
+    };
 };
