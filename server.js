@@ -31,6 +31,9 @@ var articles = {
                     </li>
                 </ol>
                 
+                <input type= "text" id= "comments"> Type your comments here </input>
+                <input type= "submit" id= "submit" value= "Post"></input>
+                
             `
     },
     'article-two' : {
