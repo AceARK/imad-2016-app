@@ -3,10 +3,13 @@ body {
     background-image: url("http://www.glaas.org/s/cc_images/teaserbox_8316596.jpg?t=1424556854");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 2000px;
+    background-size: 1500px;
     margin: 80px;
 }
 
+.information{
+    color: blue;
+}
 .center {
     text-align: center;
 }
