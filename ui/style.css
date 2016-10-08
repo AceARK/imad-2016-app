@@ -5,6 +5,7 @@ body {
     background-position: center;
     background-size: 1500px;
     margin: 80px;
+    padding:80px;
 }
 
 .information{
@@ -27,7 +28,6 @@ body {
 }
 
 .container{
-    max-width: 1000px;
     font-family: sans-serif;
     padding: 20;
     margin: 0 auto;
