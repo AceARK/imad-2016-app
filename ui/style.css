@@ -27,7 +27,7 @@ body {
 }
 
 .container{
-    max-width: 2000;
+    max-width: 1000px;
     font-family: sans-serif;
     padding: 20;
     margin: 0 auto;
