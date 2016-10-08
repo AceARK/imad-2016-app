@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image: "http://cdn.xl.thumbs.canstockphoto.com/canstock15264990.jpg";
+    background-image: url("http://cdn.xl.thumbs.canstockphoto.com/canstock15264990.jpg");
     margin: 80px;
 }
 
