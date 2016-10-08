@@ -1,9 +1,9 @@
 body {
     font-family: sans-serif;
-    background-image: url("http://cdn.xl.thumbs.canstockphoto.com/canstock15264990.jpg");
+    background-image: url("http://www.glaas.org/s/cc_images/teaserbox_8316596.jpg?t=1424556854");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1000px;
+    background-size: 500px;
     margin: 80px;
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 .text-big {
-    font-size: 100%;
+    font-size: 200%;
 }
 
 .bold {
