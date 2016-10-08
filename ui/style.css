@@ -15,7 +15,7 @@ body {
 }
 
 .text-big {
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .bold {
@@ -27,7 +27,7 @@ body {
 }
 
 .container{
-    max-width: 200;
+    max-width: 2000;
     font-family: sans-serif;
     padding: 20;
     margin: 0 auto;
