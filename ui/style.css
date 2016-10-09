@@ -5,9 +5,9 @@
 }
 .background {
     font-family: sans-serif;
-    background-image:url("http://aceark.imad.hasura-app.io/ui/catanddogwhite.jpg");
+    background-image:url("http://aceark.imad.hasura-app.io/ui/catdog.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right bottom;
     background-size: 600px;
     margin: 80px;
     padding:100px;
