@@ -1,4 +1,9 @@
-body {
+
+
+.information{
+    color: #689165;
+}
+.background {
     font-family: sans-serif;
     background-image:url("http://aceark.imad.hasura-app.io/ui/catanddogwhite.jpg");
     background-repeat: no-repeat;
@@ -6,13 +11,6 @@ body {
     background-size: 1600px;
     margin: 80px;
     padding:100px;
-}
-
-.information{
-    color: #689165;
-}
-.center {
-
 }
 
 .text-big {
