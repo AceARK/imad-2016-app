@@ -138,8 +138,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/ui/catanddogwhite.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'catanddogwhite.jpg'));
+app.get('/ui/catdog.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'catdog.jpg'));
 });
 
 app.get('/ui/mixbanner.jpg', function (req, res) {
