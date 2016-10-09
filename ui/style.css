@@ -13,6 +13,10 @@
     padding:100px;
 }
 
+.header {
+    background-image:url("http://aceark.imad.hasura-app.io/ui/mixbanner.jpg");
+}
+
 .text-big {
     font-size: 120%;
 }
