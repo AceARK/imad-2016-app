@@ -43,8 +43,8 @@
 }
 
 #volunteer_sign{
-    max-width:1000px;
-    max-height:1500px;
+    max-width:100%;
+    max-height:auto;
 }
 
 /* Style The Dropdown Button */
