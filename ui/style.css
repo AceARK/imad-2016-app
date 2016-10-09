@@ -1,7 +1,7 @@
 
 .information{
     color: #689165;
-    padding-right: 180px;
+    padding-right: 250px;
 }
 .background {
     font-family: sans-serif;
@@ -39,12 +39,12 @@
 }
 .content{
     color:#689165;
-    padding-right: 180px;
+    padding-right: 250px;
 }
 
 #volunteer_sign{
-    max-width:500px;
-    max-height:800px;
+    max-width:1000px;
+    max-height:1500px;
 }
 
 /* Style The Dropdown Button */
