@@ -1,6 +1,7 @@
 
 .information{
     color: #689165;
+    padding-right: 80px;
 }
 .background {
     font-family: sans-serif;
@@ -38,6 +39,7 @@
 }
 .content{
     color:#689165;
+    padding-right: 80px;
 }
 
 #volunteer_sign{
