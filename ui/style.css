@@ -101,8 +101,9 @@
 }
 
 .background-new{
-    background-image: url("http://aceark.imad.hasura-app.io/ui/fosterpagebackground.jpg");
-    background-repeat: no-repeat;
+    background-image: url("ui/catanddogfosterpage.jpg"),url("ui/fosterdoggy.jpg"),url("ui/fosterkitty.jpg");
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: top,left bottom, right bottom;
     background-size: contain;
     max-width:100%;
     height: auto;
