@@ -94,9 +94,8 @@
 }
 
 #container2{
-    padding: 80px;
-    max-width: 1000px;
-    max-height: 1000px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .background-new{
