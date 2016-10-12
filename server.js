@@ -166,6 +166,10 @@ app.get('/ui/register.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.gif'));
 });
 
+app.get('/ui/signup.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'signup.png'));
+});
+
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
