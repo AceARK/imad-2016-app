@@ -93,6 +93,12 @@
     background-color: #89bc85;
 }
 
+.container2{
+    padding: 80px;
+    max-width: 1000px;
+    max-height:1400px;
+}
+
 .background-new{
     background-image: url("http://aceark.imad.hasura-app.io/ui/fosterpagebackground.jpg");
     background-repeat: no-repeat;
