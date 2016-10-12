@@ -117,6 +117,7 @@
 #register_button{
     max-width: 100%;
     max-height: 50px;
+    position: center;
 }
 
 #submit{
@@ -126,11 +127,11 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    position: center;
 }
 
 .submitbutton:hover #submit{
     background-color: #89bc85;
+    position: center;
 }
 
 pre{
