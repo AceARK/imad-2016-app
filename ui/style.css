@@ -102,7 +102,11 @@
 .background-new{
     background-image: url("http://aceark.imad.hasura-app.io/ui/fosterpagebackground.jpg");
     background-repeat: no-repeat;
-    background-size: 1200px;
+    background-size: 2000px;
+}
+
+#fosterinfo{
+    padding-top:100px;
 }
 
 #register_button{
