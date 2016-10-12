@@ -137,3 +137,8 @@
 pre{
     font-family: sans-serif;
 }
+
+#signupbutton{
+    width: 80px;
+    height:50px;
+}
