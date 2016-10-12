@@ -95,6 +95,7 @@
 
 .background-new{
     background-image: url("http://aceark.imad.hasura-app.io/ui/fosterpagebackground.jpg");
+    background-repeat: no-repeat;
 }
 
 #register_button{
