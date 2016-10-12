@@ -96,3 +96,8 @@
 .background-new{
     background-image: url("http://aceark.imad.hasura-app.io/fosterpagebackground.jpg");
 }
+
+#register_button{
+    max-width: 100%;
+    max-height:20px;
+}
