@@ -101,6 +101,7 @@
 .background-new{
     background-image: url("http://aceark.imad.hasura-app.io/ui/fosterpagebackground.jpg");
     background-repeat: no-repeat;
+    background-size: contain;
     max-width:100%;
     height: auto;
 }
