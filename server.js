@@ -149,6 +149,11 @@ app.get('/ui/mixbanner.jpg', function (req, res) {
 app.get('/ui/volunteer_slide1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'volunteer_slide1.jpg'));
 });
+
+app.get('/ui/fosterpagebackground.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'fosterpagebackground.jpg'));
+});
+
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
