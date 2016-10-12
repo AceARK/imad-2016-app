@@ -150,8 +150,16 @@ app.get('/ui/volunteer_slide1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'volunteer_slide1.jpg'));
 });
 
-app.get('/ui/fosterpagebackground.jpg', function (req, res) {
+app.get('/ui/catanddogfosterpage.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'fosterpagebackground.jpg'));
+});
+
+app.get('/ui/fosterkitty.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'fosterkitty.jpg'));
+});
+
+app.get('/ui/fosterdoggy.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'fosterdoggy.jpg'));
 });
 
 app.get('/ui/register.gif', function (req, res) {
