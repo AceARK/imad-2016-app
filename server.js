@@ -154,6 +154,10 @@ app.get('/ui/fosterpagebackground.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'fosterpagebackground.jpg'));
 });
 
+app.get('/ui/register.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'register.gif'));
+});
+
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
