@@ -131,3 +131,7 @@
 .submitbutton:hover #submit{
     background-color: #89bc85;
 }
+
+pre{
+    font-family: sans-serif;
+}
