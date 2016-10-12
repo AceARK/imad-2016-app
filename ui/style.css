@@ -110,12 +110,13 @@
 }
 
 #fosterinfo{
-    padding-top:100px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
 #register_button{
     max-width: 100%;
-    max-height:50px;
+    max-height: 50px;
 }
 
 #submit{
