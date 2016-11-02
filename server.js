@@ -251,6 +251,19 @@ app.get('/ui/signup.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'signup.png'));
 });
 
+app.get('/ui/k3.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'k3.jpg'));
+});
+
+app.get('/ui/k8.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'k8.jpg'));
+});
+
+app.get('/ui/l1.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'l1.jpg'));
+});
+
+
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
