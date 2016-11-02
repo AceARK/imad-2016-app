@@ -62,13 +62,43 @@ var animalsView = {
         title: 'Kittens',
         heading: 'Meet our Kittens',
         content: `  
-        <li> <img src= "ui/k
+            <li><img src= "ui/k3.jpg"> 
+                <p> 
+                    Name: Pepper 
+                    Age: 5 weeks
+                    Gender: Male
+                    Breed: Tabby
+                    Info: Pepper loves playing with strings and his own reflection.
+                    Status: Foster care
+                </p>
+            </li>
+            <li><img src= "ui/k8.jpg">
+                <p> 
+                    Name: Katie 
+                    Age: 9 weeks
+                    Gender: Female
+                    Breed: Calico/White
+                    Info: Katie loves the sun, and though she has a bit of an attitude, she purrs lovingly for who she likes.
+                    Status: Ready for Adoption
+                </p>
+            </li>
         `
     },
     'type-two' : {
         title: 'Puppies',
         heading: 'Meet our Puppies',
-        content: ''
+        content: `
+            <li><img src= "ui/l1.jpg"> 
+                <p> 
+                    Name: Julia 
+                    Age: 7 weeks
+                    Gender: Female
+                    Breed: Labrador/White
+                    Info: Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!
+                    Status: Ready for Adoption
+                </p>
+            </li>
+        `
     },
 };
 
