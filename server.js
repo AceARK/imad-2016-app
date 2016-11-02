@@ -57,6 +57,55 @@ var articles = {
     },
 };
 
+var animalsView = {
+    'type-one' : {
+        title: 'Kittens',
+        heading: 'Meet our Kittens',
+        content: `  
+        <img src="">   <p> </p> 
+        `
+    },
+    'type-two' : {
+        title: 'Puppies',
+        heading: 'Meet our Puppies',
+        content: ''
+    },
+};
+
+function createAnimalViewTemplate(data){
+    title = data.title;
+    heading = data.heading;
+    content = data.content;
+    
+    var htmlViewTemplate = `
+    <!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+    </head>
+    
+    <body>
+        <h2>
+            ${heading}
+        </h2>
+        <ol>
+            ${content}
+        </ol>
+        
+        <p>
+            For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
+        </p>
+        <p>
+            To become a foster, click <a href="/sign_up_page"> here </a>.
+        </p>
+    </body>
+</html>
+    `;
+    return htmlViewTemplate;
+}
+
 function createTemplate(data){
     title = data.title;
     heading = data.heading;
@@ -97,6 +146,8 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
+
+
 var names = [];
 app.get('/submit', function(req,res){
     //get names from request
@@ -125,6 +176,12 @@ app.get('/:articleName', function(req,res){
    res.send(createTemplate(articles[articleName]));
 });
 */
+//animalType == type-one
+//animalsView[animalType] == [] content object for type-one
+app.get('/:animalType', function(req,res){
+    var animalType = req.params.articleName;
+    res.send(createAnimalViewTemplate(animalsView[animalType]));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
