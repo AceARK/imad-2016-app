@@ -82,13 +82,13 @@ var animalsView = {
                 <p> 
                     Name: Katie
                     <br>
-                    Age: 9 weeks
+                    Age: 7 weeks
                     <br>
                     Gender: Female
                     <br>
                     Breed: Calico/White
                     <br>
-                    Info: Katie loves the sun, and though she has a bit of an attitude, she purrs lovingly for who she likes.
+                    Info: Katie loves the sun, and running around all excited and puffed up!
                     <br>
                     Status: Ready for Adoption
                 </p>
