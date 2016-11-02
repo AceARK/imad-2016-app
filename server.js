@@ -176,12 +176,6 @@ app.get('/:articleName', function(req,res){
    res.send(createTemplate(articles[articleName]));
 });
 */
-//animalType == type-one
-//animalsView[animalType] == [] content object for type-one
-app.get('/:animalType', function(req,res){
-    var animalType = req.params.articleName;
-    res.send(createAnimalViewTemplate(animalsView[animalType]));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -230,9 +224,17 @@ app.get('/ui/signup.png', function (req, res) {
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
-
+/*
 app.get('/display', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'display.html'));
+});
+*/
+
+//animalType == type-one
+//animalsView[animalType] == [] content object for type-one
+app.get('/:animalType', function(req,res){
+    var animalType = req.params.articleName;
+    res.send(createAnimalViewTemplate(animalsView[animalType]));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
