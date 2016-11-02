@@ -62,7 +62,7 @@ var animalsView = {
         title: 'Kittens',
         heading: 'Meet our Kittens',
         content: `  
-            <li><img src= "ui/k3.jpg"> 
+            <li><img style="height:25%;width:25%" src= "ui/k3.jpg"> 
                 <p> 
                     Name: Pepper 
                     Age: 5 weeks
@@ -72,7 +72,7 @@ var animalsView = {
                     Status: Foster care
                 </p>
             </li>
-            <li><img src= "ui/k8.jpg">
+            <li><img style="height:25%;width:25%" src= "ui/k8.jpg">
                 <p> 
                     Name: Katie 
                     Age: 9 weeks
@@ -88,7 +88,7 @@ var animalsView = {
         title: 'Puppies',
         heading: 'Meet our Puppies',
         content: `
-            <li><img src= "ui/l1.jpg"> 
+            <li><img style="height:25%;width:25%" src= "ui/l1.jpg"> 
                 <p> 
                     Name: Julia 
                     Age: 7 weeks
