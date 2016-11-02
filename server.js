@@ -64,24 +64,36 @@ var animalsView = {
         content: `  
             <li><img style="height:25%;width:25%" src= "ui/k3.jpg"> 
                 <p> 
-                    Name: Pepper 
+                    Name: Pepper
+                    <br>
                     Age: 5 weeks
+                    <br>
                     Gender: Male
+                    <br>
                     Breed: Tabby
+                    <br>
                     Info: Pepper loves playing with strings and his own reflection.
+                    <br>
                     Status: Foster care
                 </p>
             </li>
+            <br><br>
             <li><img style="height:25%;width:25%" src= "ui/k8.jpg">
                 <p> 
-                    Name: Katie 
+                    Name: Katie
+                    <br>
                     Age: 9 weeks
+                    <br>
                     Gender: Female
+                    <br>
                     Breed: Calico/White
+                    <br>
                     Info: Katie loves the sun, and though she has a bit of an attitude, she purrs lovingly for who she likes.
+                    <br>
                     Status: Ready for Adoption
                 </p>
             </li>
+            <br><br>
         `
     },
     'type-two' : {
@@ -91,13 +103,19 @@ var animalsView = {
             <li><img style="height:25%;width:25%" src= "ui/l1.jpg"> 
                 <p> 
                     Name: Julia 
-                    Age: 7 weeks
+                    <br>
+                    Age: 4 weeks
+                    <br>
                     Gender: Female
+                    <br>
                     Breed: Labrador/White
+                    <br>
                     Info: Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!
+                    <br>
                     Status: Ready for Adoption
                 </p>
             </li>
+            <br><br>
         `
     },
 };
