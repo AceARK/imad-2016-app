@@ -62,7 +62,7 @@ var animalsView = {
         title: 'Kittens',
         heading: 'Meet our Kittens',
         content: `  
-        <img src="">   <p> </p> 
+        <li> <img src= "ui/k
         `
     },
     'type-two' : {
