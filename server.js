@@ -230,8 +230,8 @@ app.get('/display', function (req, res) {
 });
 */
 
-//animalType == type-one
-//animalsView[animalType] == [] content object for type-one
+//animals == type-one
+//animalsView[animals] == [] content object for type-one
 app.get('/:animals', function(req,res){
     var animals = req.params.animals;
     res.send(createAnimalViewTemplate(animalsView[animals]));
