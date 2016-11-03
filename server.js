@@ -57,10 +57,9 @@ var articles = {
     },
 };
 
-
 var tinies = {
     tinyOne : {
-        tinyType: 'Kitten',
+        tinyType: 'Kittens',
         tinyImage:'k3.jpg',
         tinyName: 'Pepper',
         tinyAge: '5 weeks',
@@ -71,7 +70,7 @@ var tinies = {
     },
     
     tinyTwo : {
-        tinyType: 'Kitten',
+        tinyType: 'Kittens',
         tinyImage:'k8.jpg',
         tinyName: 'Katie',
         tinyAge: '7 weeks',
@@ -82,7 +81,7 @@ var tinies = {
     },
     
     tinyThree : {
-        tinyType: 'Puppy',
+        tinyType: 'Puppies',
         tinyImage:'l1.jpg',
         tinyName: 'Julia',
         tinyAge: '4 weeks',
@@ -94,23 +93,20 @@ var tinies = {
 };
 
 
-
 // Function to insert data into animalsView template
 function animalDataInsert(data){
+    var animalsView = [];
     for each(var tiny in tinies){
-        image = data.tinyImage;
-        name = data.tinyName;
-        age = data.tinyAge;
-        gender = data.tinyGender;
-        breed = data.tinyBreed;
-        info = data.tinyInfo;
-        status = data.tinyStatus;
+        image = tiny.tinyImage;
+        name = tiny.tinyName;
+        age = tiny.tinyAge;
+        gender = tiny.tinyGender;
+        breed = tiny.tinyBreed;
+        info = tiny.tinyInfo;
+        status = tiny.tinyStatus;
         
-        if(data.tinyType == 'Kitten'){
-            var animalsView = {
-                    'type-one' : {
-                        title: 'Kittens',
-                        heading: 'Meet our Kittens',
+        if(tiny.tinyType == data){
+            animalsView.push({
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
@@ -129,38 +125,10 @@ function animalDataInsert(data){
                             </li>
                             <br><br>
                         `
-                    }
-            };
-            return animalsView;
-        }
-        else {
-            var animalsView = {
-                    'type-two' : {
-                        title: 'Puppies',
-                        heading: 'Meet our Puppies',
-                        content: `
-                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
-                                <p> 
-                                    Name: ${name} 
-                                    <br>
-                                    Age: ${age}
-                                    <br>
-                                    Gender: ${gender}
-                                    <br>
-                                    Breed: ${breed}
-                                    <br>
-                                    Info: ${info}
-                                    <br>
-                                    Status: ${status}
-                                </p>
-                            </li>
-                            <br><br>
-                        `
-                }
-            }; // TODO - how to append <li> items in content to get $content = <li> + <li> ... for every tiny ?
-            return animalsView;
+                    });
         }
     }
+return animalsView;
 }
 /*
 // TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
@@ -174,23 +142,27 @@ function appendAnimalViews(data){
   
 // TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
 
+
 function createAnimalViewTemplate(data){
-    title = data.title;
-    heading = data.heading;
-    content = data.content;
+    var animalList = animalDataInsert(data);
+    var content =``;
+    for each(var animal in animalList){
+        content = content + animal.content;
+    }
+
     
     var htmlViewTemplate = `
     <!DOCTYPE HTML>
 <html>
     <head>
         <title>
-            ${title}
+            ${data}.
         </title>
     </head>
     
     <body>
         <h2>
-            ${heading}
+            These are the wonderful ${data}.
         </h2>
         <ol>
             ${content}
@@ -207,7 +179,6 @@ function createAnimalViewTemplate(data){
     `;
     return htmlViewTemplate;
 }
-
 
 
 // sample code for templating function
@@ -353,11 +324,11 @@ app.get('/display', function (req, res) {
 
 //animals == type-one
 //animalsView[animals] == [] content object for type-one
-
 app.get('/:animals', function(req,res){
-    var animals = req.params.animals;
-    res.send(createAnimalViewTemplate(animalsView[animals]));
+    var selectedAnimal = req.params.animals;
+    res.send(createAnimalViewTemplate(selectedAnimal));
 });
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
