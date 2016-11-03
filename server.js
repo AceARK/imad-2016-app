@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*
+
 var tinies = {
     tinyOne : {
         tinyType: 'Kittens',
@@ -90,7 +90,7 @@ function appendAnimalViews(data){
 */
   
 // TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
-/*
+
 
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
@@ -128,7 +128,7 @@ function createAnimalViewTemplate(data){
     `;
     return htmlViewTemplate;
 }
-*/
+
 
 // sample code for templating function
 function createTemplate(data){
