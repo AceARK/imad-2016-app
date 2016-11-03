@@ -57,6 +57,7 @@ var articles = {
     },
 };
 
+
 var tinies = {
     tinyOne : {
         tinyType: 'Kitten',
@@ -91,6 +92,7 @@ var tinies = {
         tinyStatus: 'Ready for Adoption'
     }
 };
+
 
 
 // Function to insert data into animalsView template
@@ -205,6 +207,7 @@ function createAnimalViewTemplate(data){
     `;
     return htmlViewTemplate;
 }
+
 
 
 // sample code for templating function
