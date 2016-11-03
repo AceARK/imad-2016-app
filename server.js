@@ -57,68 +57,119 @@ var articles = {
     },
 };
 
-var animalsView = {
-    'type-one' : {
-        title: 'Kittens',
-        heading: 'Meet our Kittens',
-        content: `  
-            <li><img style="height:25%;width:25%" src= "ui/k3.jpg"> 
-                <p> 
-                    Name: Pepper
-                    <br>
-                    Age: 5 weeks
-                    <br>
-                    Gender: Male
-                    <br>
-                    Breed: Tabby
-                    <br>
-                    Info: Pepper loves playing with strings and his own reflection.
-                    <br>
-                    Status: Foster care
-                </p>
-            </li>
-            <br><br>
-            <li><img style="height:25%;width:25%" src= "ui/k8.jpg">
-                <p> 
-                    Name: Katie
-                    <br>
-                    Age: 7 weeks
-                    <br>
-                    Gender: Female
-                    <br>
-                    Breed: Calico/White
-                    <br>
-                    Info: Katie loves the sun, and running around all excited and puffed up!
-                    <br>
-                    Status: Ready for Adoption
-                </p>
-            </li>
-            <br><br>
-        `
+var tinies = {
+    tinyOne : {
+        tinyType: 'Kitten',
+        tinyImage:'k3.jpg',
+        tinyName: 'Pepper',
+        tinyAge: '5 weeks',
+        tinyGender: 'Male',
+        tinyBreed: 'Tabby',
+        tinyInfo: 'Pepper loves playing with strings and his own reflection.',
+        tinyStatus: 'Foster care'
     },
-    'type-two' : {
-        title: 'Puppies',
-        heading: 'Meet our Puppies',
-        content: `
-            <li><img style="height:25%;width:25%" src= "ui/l1.jpg"> 
-                <p> 
-                    Name: Julia 
-                    <br>
-                    Age: 4 weeks
-                    <br>
-                    Gender: Female
-                    <br>
-                    Breed: Labrador/White
-                    <br>
-                    Info: Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!
-                    <br>
-                    Status: Ready for Adoption
-                </p>
-            </li>
-            <br><br>
-        `
+    
+    tinyTwo : {
+        tinyType: 'Kitten',
+        tinyImage:'k8.jpg',
+        tinyName: 'Katie',
+        tinyAge: '7 weeks',
+        tinyGender: 'Female',
+        tinyBreed: 'Calico/White',
+        tinyInfo: 'Pepper loves playing with strings and his own reflection.',
+        tinyStatus: 'Foster care'
     },
+    
+    tinyThree : {
+        tinyType: 'Puppy',
+        tinyImage:'l1.jpg',
+        tinyName: 'Julia',
+        tinyAge: '4 weeks',
+        tinyGender: 'Female',
+        tinyBreed: 'Labrodor/White',
+        tinyInfo: "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
+        tinyStatus: 'Ready for Adoption'
+    }
 };
+
+
+// Function to insert data into animalsView template
+function animalDataInsert(data){
+    for each(var tiny in tinies){
+        image = data.tinyImage;
+        name = data.tinyName;
+        age = data.tinyAge;
+        gender = data.tinyGender;
+        breed = data.tinyBreed;
+        info = data.tinyInfo;
+        status = data.tinyStatus;
+        
+        if(data.tinyType == 'Kitten'){
+            var animalsView = {
+                    'type-one' : {
+                        title: 'Kittens',
+                        heading: 'Meet our Kittens',
+                        content: `  
+                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
+                                <p> 
+                                    Name: ${}
+                                    <br>
+                                    Age: ${}
+                                    <br>
+                                    Gender: ${}
+                                    <br>
+                                    Breed: ${}
+                                    <br>
+                                    Info: ${}
+                                    <br>
+                                    Status: ${}
+                                </p>
+                            </li>
+                            <br><br>
+                        `
+                    }
+            };
+            return animalsView;
+        }
+        else {
+            var animalsView = {
+                    'type-two' : {
+                        title: 'Puppies',
+                        heading: 'Meet our Puppies',
+                        content: `
+                            <li><img style="height:25%;width:25%" src= "ui/${}"> 
+                                <p> 
+                                    Name: ${} 
+                                    <br>
+                                    Age: ${}
+                                    <br>
+                                    Gender: ${}
+                                    <br>
+                                    Breed: ${}
+                                    <br>
+                                    Info: ${}
+                                    <br>
+                                    Status: ${}
+                                </p>
+                            </li>
+                            <br><br>
+                        `
+                }
+            };
+            return animalsView;
+        }
+    }
+}
+
+// TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
+function appendAnimalViews(data){
+    for each(var animalView in animalsView){
+        animalsViewContent = 'animalsView' + 'animalsView';
+    }
+    return animalsViewContent;
+}
+  
+// TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
 
 function createAnimalViewTemplate(data){
     title = data.title;
