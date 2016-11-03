@@ -5,58 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    'article-one'  : {
-    title: 'Article One of Ace Ark',
-    heading: 'Article One',
-    date: 'September 05, 2016',
-    content: `      <p>
-                    This is the first para of Article One. This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.
-                </p>
-                <p>
-                    This is the second para of Article One. This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.
-                </p>
-                <p>
-                    This is the third para of Article One. This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.This is the first para of Article One.
-                </p>
-                  <ol>
-                    <li>
-                        List item 1
-                    </li>
-                    <li>
-                         List item 2
-                    </li>
-                    <li>
-                        List item 3
-                    </li>
-                </ol>
-                
-                <input type= "text" id= "comments"> Type your comments here </input>
-                </br>
-                <input type= "submit" id= "submit" value= "Post"></input>
-                
-            `
-    },
-    'article-two' : {
-        title: 'Article Two of Ace Ark',
-        heading: 'Article Two',
-        date: 'September 15, 2016',
-        content: `      <p>
-                        This is the first para of Article Two.
-                        </p>
-                    `
-    },
-    'article-three' : {
-        title: 'Article Three of Ace Ark',
-        heading: 'Article Three',
-        date: 'September 23, 2016',
-        content: `      <p>
-                        This is the first para of Article Three.
-                        </p>
-                    `
-    },
-};
-
+/*
 var tinies = {
     tinyOne : {
         tinyType: 'Kittens',
@@ -141,7 +90,7 @@ function appendAnimalViews(data){
 */
   
 // TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
-
+/*
 
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
@@ -179,7 +128,7 @@ function createAnimalViewTemplate(data){
     `;
     return htmlViewTemplate;
 }
-
+*/
 
 // sample code for templating function
 function createTemplate(data){
