@@ -112,17 +112,17 @@ function animalDataInsert(data){
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
-                                    Name: ${}
+                                    Name: ${name}
                                     <br>
-                                    Age: ${}
+                                    Age: ${age}
                                     <br>
-                                    Gender: ${}
+                                    Gender: ${gender}
                                     <br>
-                                    Breed: ${}
+                                    Breed: ${breed}
                                     <br>
-                                    Info: ${}
+                                    Info: ${info}
                                     <br>
-                                    Status: ${}
+                                    Status: ${status}
                                 </p>
                             </li>
                             <br><br>
@@ -137,37 +137,38 @@ function animalDataInsert(data){
                         title: 'Puppies',
                         heading: 'Meet our Puppies',
                         content: `
-                            <li><img style="height:25%;width:25%" src= "ui/${}"> 
+                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
-                                    Name: ${} 
+                                    Name: ${name} 
                                     <br>
-                                    Age: ${}
+                                    Age: ${age}
                                     <br>
-                                    Gender: ${}
+                                    Gender: ${gender}
                                     <br>
-                                    Breed: ${}
+                                    Breed: ${breed}
                                     <br>
-                                    Info: ${}
+                                    Info: ${info}
                                     <br>
-                                    Status: ${}
+                                    Status: ${status}
                                 </p>
                             </li>
                             <br><br>
                         `
                 }
-            };
+            }; // TODO - how to append <li> items in content to get $content = <li> + <li> ... for every tiny ?
             return animalsView;
         }
     }
 }
-
+/*
 // TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
 function appendAnimalViews(data){
     for each(var animalView in animalsView){
-        animalsViewContent = 'animalsView' + 'animalsView';
+        animalsViewContent = animalsViewContent + animalsView;
     }
     return animalsViewContent;
 }
+*/
   
 // TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
 
@@ -205,6 +206,8 @@ function createAnimalViewTemplate(data){
     return htmlViewTemplate;
 }
 
+
+// sample code for templating function
 function createTemplate(data){
     title = data.title;
     heading = data.heading;
@@ -320,6 +323,8 @@ app.get('/ui/signup.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'signup.png'));
 });
 
+
+
 app.get('/ui/k3.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'k3.jpg'));
 });
@@ -333,6 +338,7 @@ app.get('/ui/l1.jpg', function (req, res) {
 });
 
 
+
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
@@ -344,6 +350,7 @@ app.get('/display', function (req, res) {
 
 //animals == type-one
 //animalsView[animals] == [] content object for type-one
+
 app.get('/:animals', function(req,res){
     var animals = req.params.animals;
     res.send(createAnimalViewTemplate(animalsView[animals]));
