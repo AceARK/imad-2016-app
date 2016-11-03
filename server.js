@@ -25,7 +25,7 @@ var tinies = {
         tinyAge: '7 weeks',
         tinyGender: 'Female',
         tinyBreed: 'Calico/White',
-        tinyInfo: 'Pepper loves playing with strings and his own reflection.',
+        tinyInfo: 'Katie loves the sun.',
         tinyStatus: 'Foster care'
     },
     
