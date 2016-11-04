@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-// creating data array tinies[][] for content
+
 var tinies = {
     "Kittens": [
         {
@@ -37,37 +37,26 @@ var tinies = {
             "breed": "Labrador/White",
             "info": "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
             "status": "Ready for Adoption"
-        },
-        {
-           "name": "Julian",
-            "age": "6 weeks",
-            "image": "l1.jpg",
-            "gender": "Male",
-            "breed": "Labrador/White",
-            "info": "Julian's favorite game is fetch and he can play for hours, and still be excited about going outside!",
-            "status": "Ready for Adoption"
         }
     ]
 };
 
 
-
-// Function to insert data into animalsView template to create content template
+// Function to insert data into animalsView template
 function animalDataInsert(data){
-     var animalsView = [];
-     console.log("Entered animalDataInsert");
-        var tiny;
-        for (tiny in tinies[data]) {
-            console.log("the current tiny is "+tinies[data][tiny].name);
-            image = tinies[data][tiny].image;
-            name = tinies[data][tiny].name;
-            age = tinies[data][tiny].age;
-            gender = tinies[data][tiny].gender;
-            breed = tinies[data][tiny].breed;
-            info = tinies[data][tiny].info;
-            status = tinies[data][tiny].status;
-            
-            animalsView.push({
+    var animalsView = [];
+    for (var tiny in tinies[data]){
+        image = tinies[data][tiny].tinyImage;
+        name = tinies[data][tiny].tinyName;
+        age = tinies[data][tiny].tinyAge;
+        gender = tinies[data][tiny].tinyGender;
+        breed = tinies[data][tiny].tinyBreed;
+        info = tinies[data][tiny].tinyInfo;
+        status = tinies[data][tiny].tinyStatus;
+        
+        console.log("Current selection is - " + data);
+        
+        animalsView.push({
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
@@ -87,55 +76,63 @@ function animalDataInsert(data){
                             <br><br>
                         `
                     });
+                    console.log("Current content item being pushed into animalsView - " + content);
         }
-return animalsView;
-
+    }
+    console.log("animalsView array now has - " + animalsView);
+    return animalsView;
 }
+/*
+// TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
+function appendAnimalViews(data){
+    for each(var animalView in animalsView){
+        animalsViewContent = animalsViewContent + animalsView;
+    }
+    return animalsViewContent;
+}
+*/
+  
+// TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
 
 
-// function to create template for displaying animals using created content
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
-    var animal;
-    var contentFragment = "";
-    for (animal in animalList){
-        content = animalList[animal].content;
-        console.log("Current content is "+content);
-        contentFragment = contentFragment + content;
+    var content = "";
+    for (var animal in animalList[data]){
+        content = content + animalList[animal].content;
     }
-
-    console.log("Final content is "+contentFragment);
- 
+    
+    console.log("Final content is - " + content);
     
     var htmlViewTemplate = `
                     <!DOCTYPE HTML>
-                    <html>
-                        <head>
-                            <title>
-                                ${data}.
-                            </title>
-                        </head>
-                        
-                        <body>
-                            <h2>
-                                 ${data}.
-                            </h2>
-                            <p>
-                                Here is a list of our lovely ${data}.
-                            </p>
-                            <ol>
-                                ${contentFragment}
-                            </ol>
+                        <html>
+                            <head>
+                                <title>
+                                    ${data}.
+                                </title>
+                            </head>
                             
-                            <p>
-                                For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
-                            </p>
-                            <p>
-                                To become a foster, click <a href="/sign_up_page"> here </a>.
-                            </p>
-                        </body>
-                    </html>
-            `;
+                            <body>
+                                <h2>
+                                     ${data}
+                                </h2>
+                                <p>
+                                    Here is a list of the lovely ${data}.
+                                </p>
+                                <ol>
+                                    ${content}
+                                </ol>
+                                
+                                <p>
+                                    For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
+                                </p>
+                                <p>
+                                    To become a foster, click <a href="/sign_up_page"> here </a>.
+                                </p>
+                            </body>
+                        </html>
+    `;
     return htmlViewTemplate;
 }
 
