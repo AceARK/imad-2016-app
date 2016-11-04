@@ -144,7 +144,7 @@ function createAnimalViewTemplate(data){
                         
                         <body>
                             <h2>
-                                 ${data}.
+                                 ${data}
                             </h2>
                             <p>
                                 Here is a list of our lovely ${data}.
