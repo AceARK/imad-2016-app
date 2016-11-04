@@ -59,6 +59,7 @@ function animalDataInsert(data){
         console.log("Current tiny is " + tinies[data][tiny].name);
         
         animalsView.push({
+                        name: 'monkey',
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
@@ -78,8 +79,8 @@ function animalDataInsert(data){
                             <br><br>
                         `
                     });
-                    console.log("Current content item pushed into animalsView - " + JSON.stringify(animalsView.content));
-        }
+        console.log("Current content item pushed into animalsView - " + animalsView[tiny].content);
+    }
     console.log("animalsView array now has - " + JSON.stringify(animalsView));
     return animalsView;
     
