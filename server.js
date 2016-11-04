@@ -59,7 +59,7 @@ function animalDataInsert(data){
         console.log("Current tiny is " + tinies[data][tiny].name);
         
         animalsView.push({
-                        "content": `  
+                        content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
                                     Name: ${name}
