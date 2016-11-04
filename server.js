@@ -43,6 +43,7 @@ var tinies = {
 
 
 // Function to insert data into animalsView template
+/*
 function animalDataInsert(data){
     var animalsView = [];
     for each(var tiny in tinies){
@@ -79,6 +80,8 @@ function animalDataInsert(data){
     }
 return animalsView;
 }
+*/
+
 /*
 // TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
 function appendAnimalViews(data){
