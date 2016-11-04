@@ -41,54 +41,14 @@ var tinies = {
     ]
 };
 
-/*
 
-// Function to insert data into animalsView template to create content template
-function animalDataInsert(data){
-     var animalsView = [];
-     console.log("Entered animalDataInsert");
-        var tiny;
-        for (tiny in tinies[data]) {
-            console.log("the current tiny is "+tinies[data][tiny].name);
-            image = tinies[data][tiny].image;
-            name = tinies[data][tiny].name;
-            age = tinies[data][tiny].age;
-            gender = tinies[data][tiny].gender;
-            breed = tinies[data][tiny].breed;
-            info = tinies[data][tiny].info;
-            status = tinies[data][tiny].status;
-            
-            animalsView.push({
-                        content: `  
-                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
-                                <p> 
-                                    Name: ${name}
-                                    <br>
-                                    Age: ${age}
-                                    <br>
-                                    Gender: ${gender}
-                                    <br>
-                                    Breed: ${breed}
-                                    <br>
-                                    Info: ${info}
-                                    <br>
-                                    Status: ${status}
-                                </p>
-                            </li>
-                            <br><br>
-                        `
-                    });
-        }
-return animalsView;
-
-}
-*/
-
-// function to create template for displaying animals using created content
+// function to create template for displaying animals above
 function createAnimalViewTemplate(data){
   //  var animalList = animalDataInsert(data);
     var tiny;
     var animalList = [];
+    
+    // to put all animals under (data) into animalList array.
     for (tiny in tinies[data]){
          console.log("the current tiny is "+tinies[data][tiny].name);
             image = tinies[data][tiny].image;
@@ -99,6 +59,7 @@ function createAnimalViewTemplate(data){
             info = tinies[data][tiny].info;
             status = tinies[data][tiny].status;
             
+            // adding each animal as <li> item into animalList array.
             animalList.push({
                         content: `  
                             <li> 
@@ -126,6 +87,8 @@ function createAnimalViewTemplate(data){
     
     var animal;
     var contentFragment = "";
+    
+    // combining each element in animalList array into contentFragment list.
     for (animal in animalList){
         content = animalList[animal].content;
         console.log("Current content is "+content);
@@ -134,7 +97,7 @@ function createAnimalViewTemplate(data){
 
     console.log("Final content is "+contentFragment);
  
-    
+    // template to display animals under (data).
     var htmlViewTemplate = `
                     <!DOCTYPE HTML>
                     <html>
