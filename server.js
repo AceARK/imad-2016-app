@@ -50,16 +50,14 @@ function animalDataInsert(data){
      console.log("Entered animalDataInsert");
         var tiny;
         for (tiny in tinies[data]) {
-            console.log("tiny is "+tinies[data][tiny].name);
-            image = tiny['image'];
-            console.log(image);
-            name = tiny.name;
-            console.log(name);
-            age = tiny.age;
-            gender = tiny.gender;
-            breed = tiny.breed;
-            info = tiny.info;
-            status = tiny.status;
+            console.log("the current tiny is "+tinies[data][tiny].name);
+            image = tinies[data][tiny].image;
+            name = tinies[data][tiny].name;
+            age = tinies[data][tiny].age;
+            gender = tinies[data][tiny].gender;
+            breed = tinies[data][tiny].breed;
+            info = tinies[data][tiny].info;
+            status = tinies[data][tiny].status;
             
             animalsView.push({
                         content: `  
@@ -105,8 +103,8 @@ function createAnimalViewTemplate(data){
     var animal;
     var contentFragment = "";
     for (animal in animalList){
-        content = animal.content;
-        console.log(content);
+        content = animalList[animal].content;
+        console.log("Current content is "+content);
         contentFragment = contentFragment + "${content}";
     }
 
