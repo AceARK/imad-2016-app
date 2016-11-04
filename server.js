@@ -121,7 +121,7 @@ function createAnimalViewTemplate(data){
                                  ${data}.
                             </h2>
                             <p>
-                                Here are a list of our lovely ${data}.
+                                Here is a list of our lovely ${data}.
                             </p>
                             <ol>
                                 ${contentFragment}
