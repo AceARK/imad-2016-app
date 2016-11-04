@@ -49,6 +49,7 @@ var myJson = {"omono": "bad girl"};
 function animalDataInsert(data){
      var animalsView = [];
      var tiny;
+     console.log("Vijesh");
     for (tiny in tinies){
         image = tiny.tinyImage;
         name = tiny.tinyName;
@@ -104,7 +105,7 @@ function createAnimalViewTemplate(data){
     var animal;
     var contentFragment = "";
     for (animal in animalList){
-        content = "Vijesh";
+        content = animal.content;
         contentFragment = contentFragment + "${content}";
     }
 
