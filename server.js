@@ -85,17 +85,7 @@ function createAnimalViewTemplate(data){
                     });
             contentFragment = contentFragment + animalList[tiny].content;
     }
-  /*  
-    var animal;
-    var contentFragment = "";
-    
-    // combining each element in animalList array into contentFragment list.
-    for (animal in animalList){
-        content = animalList[animal].content;
-        console.log("Current content is "+content);
-        contentFragment = contentFragment + content;
-    }
-*/
+ 
     console.log("Final content is "+contentFragment);
  
     // template to display animals under (data).
