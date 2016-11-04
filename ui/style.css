@@ -144,5 +144,6 @@ pre{
 }
 
 #templateContainer {
-    padding: 80px;
+    padding: 40px;
+    padding-left: 80px;
 }
