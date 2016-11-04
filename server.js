@@ -62,7 +62,7 @@ function createAnimalViewTemplate(data){
             status = tinies[data][tiny].status;
             
             // adding each animal as <li> item into animalList array.
-            content:   `
+            content =   `
                             <li> 
                                 <p> 
                                     Name: ${name}
