@@ -41,18 +41,18 @@ var tinies = {
     }
 };
 
-/*
+
 // Function to insert data into animalsView template
 function animalDataInsert(data){
     var animalsView = [];
     for each(var tiny in tinies){
-        image = tiny.tinyImage;
-        name = tiny.tinyName;
-        age = tiny.tinyAge;
-        gender = tiny.tinyGender;
-        breed = tiny.tinyBreed;
-        info = tiny.tinyInfo;
-        status = tiny.tinyStatus;
+        var image = tiny.tinyImage;
+        var name = tiny.tinyName;
+        var age = tiny.tinyAge;
+        var gender = tiny.tinyGender;
+        var breed = tiny.tinyBreed;
+        var info = tiny.tinyInfo;
+        var status = tiny.tinyStatus;
         
         if(tiny.tinyType == data){
             animalsView.push({
