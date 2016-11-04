@@ -6,61 +6,59 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var tinies = 
- [{
-        tinyType: 'Kittens',
-        tinyImage:'k3.jpg',
-        tinyName: 'Pepper',
-        tinyAge: '5 weeks',
-        tinyGender: 'Male',
-        tinyBreed: 'Tabby',
-        tinyInfo: 'Pepper loves playing with strings and his own reflection.',
-        tinyStatus: 'Foster care'
-    },
- {
-        tinyType: 'Kittens',
-        tinyImage:'k8.jpg',
-        tinyName: 'Katie',
-        tinyAge: '7 weeks',
-        tinyGender: 'Female',
-        tinyBreed: 'Calico/White',
-        tinyInfo: 'Katie loves the sun.',
-        tinyStatus: 'Foster care'
-    },
-    
- {
-        tinyType: 'Puppies',
-        tinyImage:'l1.jpg',
-        tinyName: 'Julia',
-        tinyAge: '4 weeks',
-        tinyGender: 'Female',
-        tinyBreed: 'Labrodor/White',
-        tinyInfo: "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
-        tinyStatus: 'Ready for Adoption'
-    }];
+var tinies = {
+    "Kittens": [
+        {
+            "name": "Pepper",
+            "age": "5 weeks",
+            "image": "k3.jpg",
+            "gender": "Male",
+            "breed": "Tabby",
+            "info": "Pepper loves playing with strings and his own reflection.",
+            "status": "Foster care"
+            
+        },
+        {
+            "name": "Katie",
+            "age": "7 weeks",
+            "image": "k8.jpg",
+            "gender": "Female",
+            "breed": "Calico/White",
+            "info": "Katie loves the sun. She has a whole lot of attitude and loves scaring humans by poofing up and running around.",
+            "status": "Ready for Adoption"
+        }
+    ],
+    "Puppies": [
+        {
+           "name": "Julia",
+            "age": "4 weeks",
+            "image": "l1.jpg",
+            "gender": "Male",
+            "breed": "Labrador/White",
+            "info": "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
+            "status": "Ready for Adoption"
+        }
+    ]
+};
 
-var myJson = {"omono": "bad girl"};
 
 
 // Function to insert data into animalsView template
 
 function animalDataInsert(data){
      var animalsView = [];
-     var element;
      console.log("Entered animalDataInsert");
-    for (element in tinies){
         var tiny;
-        for (tiny in element) {
+        for (tiny in tinies[data]) {
             console.log("tiny is "+tiny);
-        image = tiny.tinyImage;
-        name = tiny.tinyName;
-        age = tiny.tinyAge;
-        gender = tiny.tinyGender;
-        breed = tiny.tinyBreed;
-        info = tiny.tinyInfo;
-        status = tiny.tinyStatus;
-        
-        if(tiny.tinyType == data){
+            image = tiny.image;
+            name = tiny.name;
+            age = tiny.age;
+            gender = tiny.gender;
+            breed = tiny.breed;
+            info = tiny.info;
+            status = tiny.status;
+            
             animalsView.push({
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
@@ -82,8 +80,6 @@ function animalDataInsert(data){
                         `
                     });
         }
-        }
-    }
 return animalsView;
 
 }
