@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+/*
 var tinies = {
     tinyOne : {
         tinyType: 'Kittens',
@@ -40,7 +40,7 @@ var tinies = {
         tinyStatus: 'Ready for Adoption'
     }
 };
-
+*/
 
 // Function to insert data into animalsView template
 function animalDataInsert(data){
