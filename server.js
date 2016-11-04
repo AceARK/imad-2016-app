@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+// creating data array tinies[][] for content
 var tinies = {
     "Kittens": [
         {
@@ -37,29 +37,37 @@ var tinies = {
             "breed": "Labrador/White",
             "info": "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
             "status": "Ready for Adoption"
+        },
+        {
+           "name": "Julian",
+            "age": "6 weeks",
+            "image": "l1.jpg",
+            "gender": "Male",
+            "breed": "Labrador/White",
+            "info": "Julian's favorite game is fetch and he can play for hours, and still be excited about going outside!",
+            "status": "Ready for Adoption"
         }
     ]
 };
 
 
-// Function to insert data into animalsView template
+
+// Function to insert data into animalsView template to create content template
 function animalDataInsert(data){
-    var animalsView = [];
-    var tiny;
-    console.log("Current selection is - " + data);
-    for (tiny in tinies[data]){
-        image = tinies[data][tiny].image;
-        name = tinies[data][tiny].name;
-        age = tinies[data][tiny].age;
-        gender = tinies[data][tiny].gender;
-        breed = tinies[data][tiny].breed;
-        info = tinies[data][tiny].info;
-        status = tinies[data][tiny].status;
-        
-        console.log("Current tiny is " + tinies[data][tiny].name);
-        
-        animalsView.push({
-                        name: 'monkey',
+     var animalsView = [];
+     console.log("Entered animalDataInsert");
+        var tiny;
+        for (tiny in tinies[data]) {
+            console.log("the current tiny is "+tinies[data][tiny].name);
+            image = tinies[data][tiny].image;
+            name = tinies[data][tiny].name;
+            age = tinies[data][tiny].age;
+            gender = tinies[data][tiny].gender;
+            breed = tinies[data][tiny].breed;
+            info = tinies[data][tiny].info;
+            status = tinies[data][tiny].status;
+            
+            animalsView.push({
                         content: `  
                             <li><img style="height:25%;width:25%" src= "ui/${image}"> 
                                 <p> 
@@ -79,54 +87,55 @@ function animalDataInsert(data){
                             <br><br>
                         `
                     });
-        console.log("Current content item pushed into animalsView - " + animalsView[tiny].content);
-    }
-    console.log("animalsView array now has - " + animalsView);
-    return animalsView;
-    
+        }
+return animalsView;
+
 }
 
 
-// to create whole template
+// function to create template for displaying animals using created content
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
-    var contentFragment = "";
     var animal;
+    var contentFragment = "";
     for (animal in animalList){
-        contentFragment = contentFragment + animalList[animal].content;
+        content = animalList[animal].content;
+        console.log("Current content is "+content);
+        contentFragment = contentFragment + content;
     }
-    
-    console.log("Final content is - " + contentFragment);
+
+    console.log("Final content is "+contentFragment);
+ 
     
     var htmlViewTemplate = `
                     <!DOCTYPE HTML>
-                        <html>
-                            <head>
-                                <title>
-                                    ${data}.
-                                </title>
-                            </head>
+                    <html>
+                        <head>
+                            <title>
+                                ${data}.
+                            </title>
+                        </head>
+                        
+                        <body>
+                            <h2>
+                                 ${data}.
+                            </h2>
+                            <p>
+                                Here is a list of our lovely ${data}.
+                            </p>
+                            <ol>
+                                ${contentFragment}
+                            </ol>
                             
-                            <body>
-                                <h2>
-                                     ${data}
-                                </h2>
-                                <p>
-                                    Here is a list of the lovely ${data}.
-                                </p>
-                                <ol>
-                                    ${contentFragment}
-                                </ol>
-                                
-                                <p>
-                                    For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
-                                </p>
-                                <p>
-                                    To become a foster, click <a href="/sign_up_page"> here </a>.
-                                </p>
-                            </body>
-                        </html>
-    `;
+                            <p>
+                                For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
+                            </p>
+                            <p>
+                                To become a foster, click <a href="/sign_up_page"> here </a>.
+                            </p>
+                        </body>
+                    </html>
+            `;
     return htmlViewTemplate;
 }
 
@@ -240,4 +249,3 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
-
