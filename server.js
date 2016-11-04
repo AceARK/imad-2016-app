@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var tinies = {
-    tinyOne : {
+    'tinyOne' : {
         tinyType: 'Kittens',
         tinyImage:'k3.jpg',
         tinyName: 'Pepper',
@@ -18,7 +18,7 @@ var tinies = {
         tinyStatus: 'Foster care'
     },
     
-    tinyTwo : {
+    'tinyTwo' : {
         tinyType: 'Kittens',
         tinyImage:'k8.jpg',
         tinyName: 'Katie',
@@ -29,7 +29,7 @@ var tinies = {
         tinyStatus: 'Foster care'
     },
     
-    tinyThree : {
+    'tinyThree' : {
         tinyType: 'Puppies',
         tinyImage:'l1.jpg',
         tinyName: 'Julia',
@@ -41,11 +41,46 @@ var tinies = {
     }
 };
 
+var myJson = {"omono": "bad girl"};
+
 
 // Function to insert data into animalsView template
 
 function animalDataInsert(data){
-    
+     var animalsView = [];
+    for each(var tiny in tinies){
+        image = tiny.tinyImage;
+        name = tiny.tinyName;
+        age = tiny.tinyAge;
+        gender = tiny.tinyGender;
+        breed = tiny.tinyBreed;
+        info = tiny.tinyInfo;
+        status = tiny.tinyStatus;
+        
+        if(tiny.tinyType == data){
+            animalsView.push({
+                        content: `  
+                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
+                                <p> 
+                                    Name: ${name}
+                                    <br>
+                                    Age: ${age}
+                                    <br>
+                                    Gender: ${gender}
+                                    <br>
+                                    Breed: ${breed}
+                                    <br>
+                                    Info: ${info}
+                                    <br>
+                                    Status: ${status}
+                                </p>
+                            </li>
+                            <br><br>
+                        `
+                    });
+        }
+    }
+return animalsView;
 
 }
 
