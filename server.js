@@ -48,7 +48,8 @@ var myJson = {"omono": "bad girl"};
 
 function animalDataInsert(data){
      var animalsView = [];
-    for each (var tiny in tinies){
+     var tiny;
+    for (tiny in tinies){
         image = tiny.tinyImage;
         name = tiny.tinyName;
         age = tiny.tinyAge;
