@@ -81,7 +81,7 @@ function animalDataInsert(data){
                     });
         console.log("Current content item pushed into animalsView - " + animalsView[tiny].content);
     }
-    console.log("animalsView array now has - " + JSON.stringify(animalsView));
+    console.log("animalsView array now has - " + animalsView);
     return animalsView;
     
 }
