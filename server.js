@@ -144,21 +144,21 @@ function createAnimalViewTemplate(data){
                         </head>
                         
                         <body>
-                            <div id = "templateContainer" class = "center text-big bold"
+                            <div id = "templateContainer" class = "center text-big bold content"
                                 <h2>
                                      ${data}
                                 </h2>
-                                <p class = "content">
+                                <p>
                                     Here is a list of our lovely ${data}.
                                 </p>
-                                <ol class = "content">
+                                <ol>
                                     ${contentFragment}
                                 </ol>
                                 
-                                <p class = "content">
+                                <p>
                                     For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
                                 </p>
-                                <p class = "content">
+                                <p>
                                     To become a foster, click <a href="/sign_up_page"> here </a>.
                                 </p>
                             </div>
