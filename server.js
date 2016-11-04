@@ -47,7 +47,7 @@ var tinies = {
 function animalDataInsert(data){
     var animalsView = [];
     for each (var tiny in tinies) {
-            var tinyName = tiny.tinyName;
+          
         
         if(tiny.tinyType == data){
             animalsView.push({content: 'bongojhfiheihfi fugdsyfgyd'});
