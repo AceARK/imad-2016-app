@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*
+
 var tinies = {
     "Kittens": [
         {
@@ -84,8 +84,8 @@ function animalDataInsert(data){
     return animalsView;
     
 }
-*/
-/*
+
+
 // to create whole template
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
