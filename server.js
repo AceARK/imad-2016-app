@@ -47,7 +47,8 @@ function createAnimalViewTemplate(data){
   //  var animalList = animalDataInsert(data);
     var tiny;
     var animalList = [];
-    
+    var contentFragment = "";
+
     // to put all animals under (data) into animalList array.
     for (tiny in tinies[data]){
          console.log("the current tiny is "+tinies[data][tiny].name);
@@ -82,9 +83,9 @@ function createAnimalViewTemplate(data){
                             <br><br><br>
                         `
                     });
-            
+            contentFragment = contentFragment + animalList[tiny].content;
     }
-    
+  /*  
     var animal;
     var contentFragment = "";
     
@@ -94,7 +95,7 @@ function createAnimalViewTemplate(data){
         console.log("Current content is "+content);
         contentFragment = contentFragment + content;
     }
-
+*/
     console.log("Final content is "+contentFragment);
  
     // template to display animals under (data).
