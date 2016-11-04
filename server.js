@@ -138,7 +138,7 @@ function createAnimalViewTemplate(data){
                     <html>
                         <head>
                             <title>
-                                ${data}.
+                                ${data}
                             </title>
                         </head>
                         
