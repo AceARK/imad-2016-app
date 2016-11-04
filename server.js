@@ -45,6 +45,7 @@ var tinies = {
 // Function to insert data into animalsView template
 function animalDataInsert(data){
     var animalsView = [];
+    console.log("Current selection is - " + data);
     for (var tiny in tinies[data]){
         image = tinies[data][tiny].tinyImage;
         name = tinies[data][tiny].tinyName;
@@ -54,7 +55,7 @@ function animalDataInsert(data){
         info = tinies[data][tiny].tinyInfo;
         status = tinies[data][tiny].tinyStatus;
         
-        console.log("Current selection is - " + data);
+        console.log("Current tiny is " + tinies[data][tiny]);
         
         animalsView.push({
                         content: `  
@@ -82,27 +83,17 @@ function animalDataInsert(data){
     console.log("animalsView array now has - " + animalsView);
     return animalsView;
 }
-/*
-// TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
-function appendAnimalViews(data){
-    for each(var animalView in animalsView){
-        animalsViewContent = animalsViewContent + animalsView;
-    }
-    return animalsViewContent;
-}
-*/
-  
-// TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
 
 
+// to create whole template
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
-    var content = "";
+    var contentFragment = "";
     for (var animal in animalList){
-        content = content + animalList[animal].content;
+        contentFragment = contentFragment + animalList[animal].content;
     }
     
-    console.log("Final content is - " + content);
+    console.log("Final content is - " + contentFragment);
     
     var htmlViewTemplate = `
                     <!DOCTYPE HTML>
@@ -121,7 +112,7 @@ function createAnimalViewTemplate(data){
                                     Here is a list of the lovely ${data}.
                                 </p>
                                 <ol>
-                                    ${content}
+                                    ${contentFragment}
                                 </ol>
                                 
                                 <p>
