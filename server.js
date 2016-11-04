@@ -98,7 +98,7 @@ function appendAnimalViews(data){
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
     var content = "";
-    for (var animal in animalList[data]){
+    for (var animal in animalList){
         content = content + animalList[animal].content;
     }
     
