@@ -47,15 +47,15 @@ function animalDataInsert(data){
     var animalsView = [];
     console.log("Current selection is - " + data);
     for (var tiny in tinies[data]){
-        image = tinies[data][tiny].tinyImage;
-        name = tinies[data][tiny].tinyName;
-        age = tinies[data][tiny].tinyAge;
-        gender = tinies[data][tiny].tinyGender;
-        breed = tinies[data][tiny].tinyBreed;
-        info = tinies[data][tiny].tinyInfo;
-        status = tinies[data][tiny].tinyStatus;
+        image = tinies[data][tiny].image;
+        name = tinies[data][tiny].name;
+        age = tinies[data][tiny].age;
+        gender = tinies[data][tiny].gender;
+        breed = tinies[data][tiny].breed;
+        info = tinies[data][tiny].info;
+        status = tinies[data][tiny].status;
         
-        console.log("Current tiny is " + tinies[data][tiny]);
+        console.log("Current tiny is " + tinies[data][tiny].name);
         
         animalsView.push({
                         content: `  
@@ -77,7 +77,7 @@ function animalDataInsert(data){
                             <br><br>
                         `
                     });
-                    console.log("Current content item being pushed into animalsView - " + content);
+                    console.log("Current content item pushed into animalsView - " + content);
         }
     }
     console.log("animalsView array now has - " + animalsView);
