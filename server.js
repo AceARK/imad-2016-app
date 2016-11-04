@@ -86,7 +86,6 @@ function animalDataInsert(data){
 }
 
 
-
 // to create whole template
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
