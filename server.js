@@ -103,10 +103,13 @@ function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
     var content;
     var animal;
+    var contentFragment = "";
     for (animal in animalList){
-        content = content + animal.content;
+        content = animal.content;
+        contentFragment = contentFragment + "${content}";
     }
 
+ 
     
     var htmlViewTemplate = `
     <!DOCTYPE HTML>
@@ -122,7 +125,7 @@ function createAnimalViewTemplate(data){
             These are the wonderful ${data}.
         </h2>
         <ol>
-            ${content}
+            ${contentFragment}
         </ol>
         
         <p>
