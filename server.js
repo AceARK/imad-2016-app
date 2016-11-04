@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var tinies = {
-    'tinyOne' : {
+var tinies = 
+ [{
         tinyType: 'Kittens',
         tinyImage:'k3.jpg',
         tinyName: 'Pepper',
@@ -17,8 +17,7 @@ var tinies = {
         tinyInfo: 'Pepper loves playing with strings and his own reflection.',
         tinyStatus: 'Foster care'
     },
-    
-    'tinyTwo' : {
+ {
         tinyType: 'Kittens',
         tinyImage:'k8.jpg',
         tinyName: 'Katie',
@@ -29,7 +28,7 @@ var tinies = {
         tinyStatus: 'Foster care'
     },
     
-    'tinyThree' : {
+ {
         tinyType: 'Puppies',
         tinyImage:'l1.jpg',
         tinyName: 'Julia',
@@ -38,8 +37,7 @@ var tinies = {
         tinyBreed: 'Labrodor/White',
         tinyInfo: "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
         tinyStatus: 'Ready for Adoption'
-    }
-};
+    }];
 
 var myJson = {"omono": "bad girl"};
 
@@ -51,7 +49,6 @@ function animalDataInsert(data){
      var tiny;
      console.log("Vijesh");
     for (tiny in tinies){
-        
         console.log("tiny is "+tiny);
         image = tiny.tinyImage;
         name = tiny.tinyName;
