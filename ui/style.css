@@ -142,3 +142,7 @@ pre{
     width: 10%;
     height: 10%;
 }
+
+#templateContainer {
+    padding: 80px;
+}
