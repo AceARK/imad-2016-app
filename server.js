@@ -41,7 +41,7 @@ var tinies = {
     }
 };
 
-
+/*
 // Function to insert data into animalsView template
 function animalDataInsert(data){
     var animalsView = [];
