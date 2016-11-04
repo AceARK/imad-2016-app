@@ -46,9 +46,6 @@ var tinies = {
 
 function animalDataInsert(data){
     
-    for each (var tiny in tinies) {
-        
-    }
 
 }
 
