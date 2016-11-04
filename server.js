@@ -80,9 +80,9 @@ function animalDataInsert(data){
                     });
                     console.log("Current content item pushed into animalsView - " + content);
         }
-    }
     console.log("animalsView array now has - " + animalsView);
     return animalsView;
+    
 }
 
 
