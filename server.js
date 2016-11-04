@@ -150,49 +150,6 @@ function createAnimalViewTemplate(data){
 }
 
 
-// sample code for templating function
-function createTemplate(data){
-    title = data.title;
-    heading = data.heading;
-    date = data.date;
-    content = data.content;
-    
-    var htmlTemplate = `
-    <html>
-        <head>
-            <title> ${title} </title>
-            <meta name="viewport" content="width=height-width, initial-scale=1" />
-            <link href="/ui/style.css" rel="stylesheet" />
-        </head>
-        <body>
-            <div class="container">
-                <div>
-                     <a href="/"> Home </a> 
-                     <hr>
-                </div>
-                 
-                <div>
-                    <h3> ${heading} </h3>
-                </div>
-                
-                <div> 
-                    ${date}
-                </div>
-             
-                <div class="content">
-                   ${content}
-                </div>
-        
-             </div> 
-        </body>
-        
-    </html>
-    `;
-    return htmlTemplate;
-}
-
-
-
 var names = [];
 app.get('/submit', function(req,res){
     //get names from request
