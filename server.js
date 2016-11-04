@@ -46,7 +46,7 @@ var tinies = {
 function createAnimalViewTemplate(data){
   //  var animalList = animalDataInsert(data);
     var tiny;
-    var animalList = [];
+    
     var contentFragment = "";
     var content = ``;
 
