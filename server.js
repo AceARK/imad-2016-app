@@ -45,8 +45,9 @@ var tinies = {
 // Function to insert data into animalsView template
 function animalDataInsert(data){
     var animalsView = [];
+    var tiny;
     console.log("Current selection is - " + data);
-    for (var tiny in tinies[data]){
+    for (tiny in tinies[data]){
         image = tinies[data][tiny].image;
         name = tinies[data][tiny].name;
         age = tinies[data][tiny].age;
@@ -85,11 +86,13 @@ function animalDataInsert(data){
 }
 
 
+
 // to create whole template
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
     var contentFragment = "";
-    for (var animal in animalList){
+    var animal;
+    for (animal in animalList){
         contentFragment = contentFragment + animalList[animal].content;
     }
     
