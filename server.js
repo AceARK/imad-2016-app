@@ -144,7 +144,7 @@ function createAnimalViewTemplate(data){
                         </head>
                         
                         <body>
-                            <div id = "templateContainer" class = "center text-big bold content"
+                            <div id = "templateContainer" class = "center text-big bold content">
                                 <h2>
                                      ${data}
                                 </h2>
