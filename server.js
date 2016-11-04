@@ -54,7 +54,7 @@ function animalDataInsert(data){
             image = tiny['image'];
             console.log(image);
             name = tiny.name;
-            comsole.log(name);
+            console.log(name);
             age = tiny.age;
             gender = tiny.gender;
             breed = tiny.breed;
