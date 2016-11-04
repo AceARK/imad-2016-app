@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+// creating data for content
 var tinies = {
     "Kittens": [
         {
@@ -52,8 +52,7 @@ var tinies = {
 
 
 
-// Function to insert data into animalsView template
-
+// Function to insert data into animalsView template to create content template
 function animalDataInsert(data){
      var animalsView = [];
      console.log("Entered animalDataInsert");
@@ -94,10 +93,7 @@ return animalsView;
 }
 
 
-/*
-// TODO - append each animalView as animalView[0] + contentFragment[1] +... to create list items inside template <ol> tag
-
-// function to create the template for displaying animals
+// function to create template for displaying animals using created content
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
     var animal;
@@ -122,8 +118,11 @@ function createAnimalViewTemplate(data){
     
     <body>
         <h2>
-            These are the wonderful ${data}.
+             ${data}.
         </h2>
+        <p>
+            Here are a list of our lovely ${data}.
+        </p>
         <ol>
             ${contentFragment}
         </ol>
