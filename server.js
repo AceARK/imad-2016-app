@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-// creating data array for content
+// creating data array tinies[][] for content
 var tinies = {
     "Kittens": [
         {
