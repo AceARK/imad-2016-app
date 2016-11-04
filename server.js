@@ -48,6 +48,7 @@ function createAnimalViewTemplate(data){
     var tiny;
     var animalList = [];
     var contentFragment = "";
+    var content = "";
 
     // to put all animals under (data) into animalList array.
     for (tiny in tinies[data]){
@@ -61,8 +62,7 @@ function createAnimalViewTemplate(data){
             status = tinies[data][tiny].status;
             
             // adding each animal as <li> item into animalList array.
-            animalList.push({
-                        content: `  
+            content: `  
                             <li> 
                                 <p> 
                                     Name: ${name}
@@ -82,8 +82,8 @@ function createAnimalViewTemplate(data){
                             </li>
                             <br><br><br>
                         `
-                    });
-            contentFragment = contentFragment + animalList[tiny].content;
+                    ;
+            contentFragment = contentFragment + content;
     }
  
     console.log("Final content is "+contentFragment);
