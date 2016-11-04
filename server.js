@@ -104,6 +104,7 @@ function createAnimalViewTemplate(data){
     var contentFragment = "";
     for (animal in animalList){
         content = animal.content;
+        console.log(content);
         contentFragment = contentFragment + "${content}";
     }
 
