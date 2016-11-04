@@ -51,6 +51,8 @@ function animalDataInsert(data){
      var tiny;
      console.log("Vijesh");
     for (tiny in tinies){
+        
+        console.log("tiny is "+tiny);
         image = tiny.tinyImage;
         name = tiny.tinyName;
         age = tiny.tinyAge;
