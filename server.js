@@ -95,18 +95,9 @@ return animalsView;
 
 
 /*
-// TODO - append each animalView as animalView[0] + animalView[1] +... to create list items inside template <ol> tag
-function appendAnimalViews(data){
-    for each(var animalView in animalsView){
-        animalsViewContent = animalsViewContent + animalsView;
-    }
-    return animalsViewContent;
-}
-*/
-  
-// TODO - use the above animalsView as $content as data for function createAnimalViewTemplate      
+// TODO - append each animalView as animalView[0] + contentFragment[1] +... to create list items inside template <ol> tag
 
-
+// function to create the template for displaying animals
 function createAnimalViewTemplate(data){
     var animalList = animalDataInsert(data);
     var animal;
@@ -149,7 +140,7 @@ function createAnimalViewTemplate(data){
     return htmlViewTemplate;
 }
 
-
+// sample code
 var names = [];
 app.get('/submit', function(req,res){
     //get names from request
@@ -160,10 +151,12 @@ app.get('/submit', function(req,res){
     res.send(JSON.stringify(names));
 });
 
+// mapping for homepage
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+// sample code
 var counter = 0;
 app.get('/counter', function(req,res){
     counter = counter + 1;
@@ -179,52 +172,49 @@ app.get('/:articleName', function(req,res){
 });
 */
 
+// mapping for css
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+// mapping for javascript file
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+/*
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+*/
 
+// mappings for various image files used in backgrounds
 app.get('/ui/catdog.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'catdog.jpg'));
 });
-
 app.get('/ui/mixbanner.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'mixbanner.jpg'));
 });
-
 app.get('/ui/volunteer_slide1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'volunteer_slide1.jpg'));
 });
-
 app.get('/ui/catanddogfosterpage.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'catanddogfosterpage.jpg'));
 });
-
 app.get('/ui/fosterkitty.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'fosterkitty.jpg'));
 });
-
 app.get('/ui/fosterdoggy.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'fosterdoggy.jpg'));
 });
-
 app.get('/ui/register.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.gif'));
 });
-
 app.get('/ui/signup.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'signup.png'));
 });
 
-
-
+// mappings for images of animals
 app.get('/ui/k3.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'k3.jpg'));
 });
@@ -238,7 +228,7 @@ app.get('/ui/l1.jpg', function (req, res) {
 });
 
 
-
+// mapping for sign up page
 app.get('/sign_up_page', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sign_up_page.html'));
 });
@@ -248,8 +238,8 @@ app.get('/display', function (req, res) {
 });
 */
 
-//animals == type-one
-//animalsView[animals] == [] content object for type-one
+//animals == Kittens
+// function call for content of selected data Kittens 
 app.get('/:animals', function(req,res){
     var selectedAnimal = req.params.animals;
     res.send(createAnimalViewTemplate(selectedAnimal));
