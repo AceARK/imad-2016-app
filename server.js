@@ -47,7 +47,7 @@ var myJson = {"omono": "bad girl"};
 function animalDataInsert(data){
      var animalsView = [];
      var element;
-     console.log("Vijesh");
+     console.log("Entered animalDataInsert");
     for (element in tinies){
         var tiny;
         for (tiny in element) {
