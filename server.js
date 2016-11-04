@@ -50,7 +50,7 @@ function animalDataInsert(data){
      console.log("Entered animalDataInsert");
         var tiny;
         for (tiny in tinies[data]) {
-            console.log("tiny is "+tinies[data].[tiny].name);
+            console.log("tiny is "+tinies[data][tiny].name);
             image = tiny['image'];
             console.log(image);
             name = tiny.name;
