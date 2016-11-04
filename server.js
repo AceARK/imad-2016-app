@@ -108,34 +108,34 @@ function createAnimalViewTemplate(data){
  
     
     var htmlViewTemplate = `
-    <!DOCTYPE HTML>
-<html>
-    <head>
-        <title>
-            ${data}.
-        </title>
-    </head>
-    
-    <body>
-        <h2>
-             ${data}.
-        </h2>
-        <p>
-            Here are a list of our lovely ${data}.
-        </p>
-        <ol>
-            ${contentFragment}
-        </ol>
-        
-        <p>
-            For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
-        </p>
-        <p>
-            To become a foster, click <a href="/sign_up_page"> here </a>.
-        </p>
-    </body>
-</html>
-    `;
+                    <!DOCTYPE HTML>
+                    <html>
+                        <head>
+                            <title>
+                                ${data}.
+                            </title>
+                        </head>
+                        
+                        <body>
+                            <h2>
+                                 ${data}.
+                            </h2>
+                            <p>
+                                Here are a list of our lovely ${data}.
+                            </p>
+                            <ol>
+                                ${contentFragment}
+                            </ol>
+                            
+                            <p>
+                                For more information on any one of these cuties, contact us <a href="/contact_page"> here </a>.
+                            </p>
+                            <p>
+                                To become a foster, click <a href="/sign_up_page"> here </a>.
+                            </p>
+                        </body>
+                    </html>
+            `;
     return htmlViewTemplate;
 }
 
