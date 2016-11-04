@@ -47,35 +47,10 @@ var tinies = {
 function animalDataInsert(data){
     var animalsView = [];
     for each (var tiny in tinies) {
-        tinyImage = tiny.tinyImage;
-        tinyName = tiny.tinyName;
-        tinyAge = tiny.tinyAge;
-        tinyGender = tiny.tinyGender;
-        tinyBreed = tiny.tinyBreed;
-        tinyInfo = tiny.tinyInfo;
-        tinyStatus = tiny.tinyStatus;
+            var tinyName = tiny.tinyName;
         
         if(tiny.tinyType == data){
-            animalsView.push({
-                        content: `  
-                            <li><img style="height:25%;width:25%" src= "ui/${tinyImage}"> 
-                                <p> 
-                                    Name: ${tinyName}
-                                    <br>
-                                    Age: ${tinyAge}
-                                    <br>
-                                    Gender: ${tinyGender}
-                                    <br>
-                                    Breed: ${tinyBreed}
-                                    <br>
-                                    Info: ${tinyInfo}
-                                    <br>
-                                    Status: ${tinyStatus}
-                                </p>
-                            </li>
-                            <br><br>
-                        `
-                    });
+            animalsView.push({content: 'Name: ${tinyName}'});
         }
     }
 return animalsView;
