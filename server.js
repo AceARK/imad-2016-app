@@ -101,9 +101,11 @@ function createAnimalViewTemplate(data){
             
             animalList.push({
                         content: `  
-                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
+                            <li> 
                                 <p> 
                                     Name: ${name}
+                                    <br><br>
+                                    <img style="height:25%;width:25%" src= "ui/${image}">
                                     <br>
                                     Age: ${age}
                                     <br>
@@ -116,7 +118,7 @@ function createAnimalViewTemplate(data){
                                     Status: ${status}
                                 </p>
                             </li>
-                            <br><br>
+                            <br><br><br>
                         `
                     });
             
