@@ -37,15 +37,6 @@ var tinies = {
             "breed": "Labrador/White",
             "info": "Julia's favorite game is fetch and she can play for hours, and still be excited about going outside!",
             "status": "Ready for Adoption"
-        },
-        {
-           "name": "Julian",
-            "age": "6 weeks",
-            "image": "l1.jpg",
-            "gender": "Male",
-            "breed": "Labrador/White",
-            "info": "Julian's favorite game is fetch and he can play for hours, and still be excited about going outside!",
-            "status": "Ready for Adoption"
         }
     ]
 };
