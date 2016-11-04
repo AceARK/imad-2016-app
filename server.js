@@ -45,15 +45,11 @@ var tinies = {
 // Function to insert data into animalsView template
 
 function animalDataInsert(data){
-    var animalsView = [];
+    
     for each (var tiny in tinies) {
-          
         
-        if(tiny.tinyType == data){
-            animalsView.push({content: 'bongojhfiheihfi fugdsyfgyd'});
-        }
     }
-return animalsView;
+
 }
 
 
