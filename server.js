@@ -50,7 +50,7 @@ var tinies = {
     ]
 };
 
-
+/*
 
 // Function to insert data into animalsView template to create content template
 function animalDataInsert(data){
@@ -91,11 +91,46 @@ function animalDataInsert(data){
 return animalsView;
 
 }
-
+*/
 
 // function to create template for displaying animals using created content
 function createAnimalViewTemplate(data){
-    var animalList = animalDataInsert(data);
+  //  var animalList = animalDataInsert(data);
+    var tiny;
+    var animalList = [];
+    for (tiny in tinies[data]){
+         console.log("the current tiny is "+tinies[data][tiny].name);
+            image = tinies[data][tiny].image;
+            name = tinies[data][tiny].name;
+            age = tinies[data][tiny].age;
+            gender = tinies[data][tiny].gender;
+            breed = tinies[data][tiny].breed;
+            info = tinies[data][tiny].info;
+            status = tinies[data][tiny].status;
+            
+            animalList.push({
+                        content: `  
+                            <li><img style="height:25%;width:25%" src= "ui/${image}"> 
+                                <p> 
+                                    Name: ${name}
+                                    <br>
+                                    Age: ${age}
+                                    <br>
+                                    Gender: ${gender}
+                                    <br>
+                                    Breed: ${breed}
+                                    <br>
+                                    Info: ${info}
+                                    <br>
+                                    Status: ${status}
+                                </p>
+                            </li>
+                            <br><br>
+                        `
+                    });
+            
+    }
+    
     var animal;
     var contentFragment = "";
     for (animal in animalList){
