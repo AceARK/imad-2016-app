@@ -78,9 +78,9 @@ function animalDataInsert(data){
                             <br><br>
                         `
                     });
-                    console.log("Current content item pushed into animalsView - " + animalsView.content);
+                    console.log("Current content item pushed into animalsView - " + JSON.stringify(animalsView.content));
         }
-    console.log("animalsView array now has - " + animalsView);
+    console.log("animalsView array now has - " + JSON.stringify(animalsView));
     return animalsView;
     
 }
