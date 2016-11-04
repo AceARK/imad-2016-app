@@ -117,6 +117,7 @@ function createAnimalViewTemplate(data){
         contentFragment = contentFragment + content;
     }
 
+    console.log("Final content is "+contentFragment);
  
     
     var htmlViewTemplate = `
