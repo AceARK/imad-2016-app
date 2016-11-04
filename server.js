@@ -50,7 +50,7 @@ function animalDataInsert(data){
             var tinyName = tiny.tinyName;
         
         if(tiny.tinyType == data){
-            animalsView.push({content: 'Name: ${tinyName}'});
+            animalsView.push({content: 'bongojhfiheihfi fugdsyfgyd'});
         }
     }
 return animalsView;
